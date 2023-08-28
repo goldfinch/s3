@@ -1,0 +1,23 @@
+---
+Name: goldfinch-s3-aws-cdn
+Only:
+  envvarset: AWS_PUBLIC_CDN_PREFIX
+After:
+  - "#assetsflysystem"
+  - "#silverstripes3-flysystem"
+---
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\S3\Adapter\PublicAdapter:
+    class: SilverStripe\S3\Adapter\PublicCDNAdapter
+    constructor:
+      s3Client: '%$Aws\S3\S3Client'
+      bucket: "`AWS_BUCKET_NAME`"
+      prefix: "`AWS_PUBLIC_BUCKET_PREFIX`"
+      cdnPrefix: "`AWS_PUBLIC_CDN_PREFIX`"
+      options: []
+      cdnAssetsDir: "public"
+# SilverStripe\AssetAdmin\Forms\PreviewImageField:
+#   bust_cache: false
+
+# SilverStripe\AssetAdmin\Controller\AssetAdmin:
+#   bust_cache: false
