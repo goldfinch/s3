@@ -19,7 +19,7 @@
         "psr-4": {
             "Goldfinch\\S3\\": "src/"
         }
-    },,
+    },
     "repositories": [
         {
             "type": "vcs",
