@@ -12,13 +12,24 @@
     "require": {
         "php": ">=8.0",
         "silverstripe/framework": "^5.0",
-        "silverstripe/admin": "^2.0"
+        "silverstripe/admin": "^2.0",
+        "silverstripe/s3": "dev-custom"
     },
     "autoload": {
         "psr-4": {
             "Goldfinch\\S3\\": "src/"
         }
-    },
+    },,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/goldfinch/silverstripe-s3"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/goldfinch/flysystem-cached-adapter"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
