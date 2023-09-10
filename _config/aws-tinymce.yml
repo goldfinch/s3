@@ -5,7 +5,7 @@ After:
 ---
 
 # Make sure _tinymce/tinymce-{name}-{hash}.js is stored on S3 instead, to avoid `tinymce not defined` in cms
-SilverStripe\Core\Injector\Injector:
-  SilverStripe\Forms\HTMLEditor\TinyMCECombinedGenerator:
-    properties:
-      AssetHandler: '%$SilverStripe\Assets\Storage\GeneratedAssetHandler'
+#SilverStripe\Core\Injector\Injector:
+#  SilverStripe\Forms\HTMLEditor\TinyMCECombinedGenerator:
+#    properties:
+#      AssetHandler: '%$SilverStripe\Assets\Storage\GeneratedAssetHandler'
