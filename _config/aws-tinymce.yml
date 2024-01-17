@@ -1,9 +1,8 @@
 ---
 Name: goldfinch-s3-aws-tinymce
 After:
-  - '#silverstripes3-tinymce'
+  - "#silverstripes3-tinymce"
 ---
-
 # Make sure _tinymce/tinymce-{name}-{hash}.js is stored on S3 instead, to avoid `tinymce not defined` in cms
 SilverStripe\Core\Injector\Injector:
   SilverStripe\Forms\HTMLEditor\TinyMCECombinedGenerator:
